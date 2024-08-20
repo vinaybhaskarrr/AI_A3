@@ -1,0 +1,17 @@
+Somisetty Harsha Vardhan 2020CS10390
+Varada Vinay Bhaskar 2020CS10405
+
+Part A(Particle filter):
+Here we took 1000 particles and distributed them according to the probability distribution in belief and then by
+using transProbabilities we moved each particle to its corresponding positions and then added weight to the moved grid
+by using pdf function guven in the code. And then updated belief matrix with these new weights and then normalised
+the belief using normalized function in utils.
+
+Part B(intelligent):
+By using the edges in create world we will find all the adjacent edges to our current node and check the sum of all beliefs 
+corresponding to each node and then we check whether these are greater than the threashold probability and then we remove these
+which are greater than the threashold. And apply BFS on the remaining nodes by keeping goal state as the current checkpoint and 
+then we will find the shortestpath and then update the goalPos to this node and the return those. Incase if there are no adjacent
+node to the current node then it must be in the padding region so we will deal it differently. If no node satisfies threashold 
+value then we will make moveForward as False and then return goalPos and moveForward.
+
